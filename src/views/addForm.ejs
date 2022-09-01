@@ -1,0 +1,34 @@
+<%-include('./partials/header')%>
+<main class="text-center">
+    <h1>Formulario nueva transacción</h1>
+    <form action="/trx" method="POST" class="">
+      <div class="mb-3">
+        <label class="form-label">Seleccionar cliente: </label>
+        <select name="client" class="form-select w-25" aria-label="Default select example">
+          <option value="" selected>Seleccionar cliente</option>
+            <% for(let i=0; i<clients.length; i++) { %>
+              <option value="<%=clients[i].client_id%>"><%=clients[i].client_name%></option>
+            <%}%>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Seleccionar tipo trx: </label>
+        <select name="trx" class="form-select w-25" aria-label="Default select example">
+          <option value="" selected>Seleccionar transacción</option>
+            <% for(let i=0; i<types.length; i++) { %>
+              <option value="<%=types[i].type_id%>"><%=types[i].type_name%></option>
+            <%}%>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="import" class="form-label">Ingresar importe:</label>
+        <input name="import" type="text" class="form-control w-25" id="import">
+      </div>
+      <div class="mb-3">
+        <label for="date" class="form-label">Ingresar fecha:</label>
+        <input name="date" type="date" class="form-control w-25" id="date">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </main>
+  <%-include('./partials/footer')%>
