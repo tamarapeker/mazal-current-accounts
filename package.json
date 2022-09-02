@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": " tsc && node ./bin/www",
+    "start": "node ./bin/www",
     "dev": "nodemon --exec ts-node ./bin/www.ts",
     "build": "sh etc/build.sh"
   },
@@ -30,7 +30,7 @@
     "@types/node": "^16.10.2",
     "nodemon": "^2.0.15",
     "ts-node": "^10.2.1",
-    "typescript": "^4.4.3"
+    "typescript": "^4.8.2"
   },
   "_moduleAliases": {
     "@": "./src"
