@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node --exec ts-node ./bin/www.ts",
+    "start": " tsc && node ./bin/www",
+    "dev": "nodemon --exec ts-node ./bin/www.ts",
     "build": "sh etc/build.sh"
   },
   "dependencies": {
